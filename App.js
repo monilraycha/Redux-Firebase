@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View , Image , Button , ScrollView , SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View , Image , Button , ScrollView  } from 'react-native'
 import React from 'react'
 import Header from './components/Header'
 import Product from './components/Product'
@@ -29,12 +29,13 @@ const App = ()  => {
 
 
   return (
-    <ScrollView style={styles.container}> 
-    <Header />
-    {
-      products.map((item, index) => <Product key={index} item={item} />)
-    }
-    </ScrollView> 
+      <ScrollView style={styles.container} statusBarHidden={true}> 
+      <Header />
+      {
+        products.map((item, index) => <Product key={index} item={item} />)
+      }
+      </ScrollView>
+
   )
 }
 
